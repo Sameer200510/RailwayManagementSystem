@@ -1,0 +1,80 @@
+
+
+## 🚀 How to Run the Railway Management System Locally
+
+Follow these steps to set up and run the project using XAMPP:
+
+---
+
+### 🔧 1. Clone the Repository
+
+```bash
+git clone https://github.com/Sameer200510/RailwayManagementSystem.git
+```
+
+Or download the ZIP and extract it to:
+
+```
+C:\xampp\htdocs\RailwayManagementSystem
+```
+
+---
+
+### 🛠️ 2. Start XAMPP
+
+- Open the **XAMPP Control Panel**
+- Start **Apache** and **MySQL**
+
+---
+
+### 🗃️ 3. Import the Database
+
+1. Open **phpMyAdmin** at [http://localhost/phpmyadmin](http://localhost/phpmyadmin)  
+2. Click **Databases** → Create a new database named `railway_db`  
+3. Select `railway_db` → Click **Import**  
+4. Choose the provided `.sql` file from the `/sql` folder  
+5. Click **Go** to import tables and data
+
+---
+
+### 🔐 4. Configure Database Connection
+
+Open `db_config.php` and update credentials if needed:
+
+```php
+$conn = mysqli_connect("localhost", "root", "your_password", "railway_db");
+```
+
+Replace `"your_password"` with your actual MySQL root password.
+
+---
+
+### 🌐 5. Access the Project
+
+Open your browser and go to:
+
+```
+http://localhost/RailwayManagementSystem/
+```
+
+You can now:
+- Search trains via `search.php`
+- Book tickets via `book.php`
+- View bookings via `admin.php`
+
+---
+
+### 📦 Optional: Host on Another Device
+
+- Find your PC’s IP using `ipconfig`
+- Access from another device using:
+  ```
+  http://<your-ip>/RailwayManagementSystem/
+  ```
+
+For internet access, use [ngrok](https://ngrok.com/) or configure port forwarding.
+
+---
+
+Let me know if you want a matching `.sql` export, screenshots, or a setup video link to include in your repo!
+Email:sameerlohani200510@gmail.com
